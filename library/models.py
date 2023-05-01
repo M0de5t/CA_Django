@@ -33,6 +33,7 @@ class Book(models.Model):
     description = models.TextField('Description', max_length=1000,help_text="Short book description")
     isbn = models.CharField("ISBN", max_length=13,
         help_text='ISBN nr.: <a href="https://www.isbn-international.org/content/what-isbn">ISBN kodas</a>')
+
     genre = models.ManyToManyField(Genre, help_text="Enter books genre:")
 
     def __str__(self):
